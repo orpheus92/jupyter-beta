@@ -23,7 +23,9 @@ namespace KernelMessage {
    * Create a well-formed kernel message.
    */
   export
-  function createMessage(options: IOptions, content: JSONObject = {}, metadata: JSONObject = {}, buffers: (ArrayBuffer | ArrayBufferView)[] = []) : IMessage {
+  function createMessage(options: IOptions, content: JSONObject = {}, metadata: JSONObject = {}, buffers: (ArrayBuffer | ArrayBufferView)[] = []) : IMessage { console.log("#### Create Kernel Message");
+	   console.log("Options for KernelMessage");
+	   console.log(options);
     return {
       header: {
         username: options.username || '',
